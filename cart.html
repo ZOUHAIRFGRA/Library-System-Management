@@ -1,0 +1,192 @@
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+   <link rel="icon" type="image/x-icon" href="pictures/favicon.png">
+
+    <title>CMC Library</title>
+  </head>
+  <body>
+<header style="min-height: 20vh" >
+        <div class="container-fluid p-0">
+            <nav class="navbar navbar-expand-lg container-fluid   bg-light">
+                <a class="navbar-brand" href="index.html">
+                <img
+                    src="https://www.cmc.ac.ma/sites/default/files/2022-07/Logo-CMC-Familly_Pluriel_Vect_1.png"
+                    width="87px"
+                    class="d-inline-block ms-4"
+                    alt="Logo-CMC-Familly_Pluriel_Vect_1"
+                />
+                
+                </a>
+                <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+                >
+                <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div
+                class="collapse navbar-collapse justify-content-end"
+                id="navbarSupportedContent"
+                >
+                <ul class="navbar-nav flex justify-content-end" id="navBar">
+                    <li class="nav-item active">
+                    <a class="nav-link" href="index.html"
+                        >Home</a
+                    >
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="trending.html">Trending</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="profile.html">My Profile</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="registration.html">Registration</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="connection.html">Connection</a>
+                    </li>
+                    <li class="nav-item position-relative">
+                    <span
+                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                    >
+                        1
+                        <span class="visually-hidden">unread messages</span>
+                    </span>
+                    <a class="nav-link" href="cart.html">My cart</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="connection.html">Disconnection</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header> 
+    <!-- header end -->
+    
+    <main class="bg-white p-5 " style="min-height:70vh">
+        <div class="row col-md-10 mx-auto justify-content-center">
+            <div class="col-md-12">
+                <a class="badge text-bg-danger" href="#">Empty Cart</a>
+            </div>
+
+            <table class="table my-5">
+                <thead>
+                    <tr>
+                    <th scope="col">Title</th>
+                    <th scope="col">Duration</th>
+                    <th scope="col">Photo</th>
+                    <th scope="col">Action</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Jump: Take the Leap of Faith</td>
+                        <td>
+                            <form action="succes.html">                                    
+                                    <select class="form-control custom-select" aria-label="Default select example">
+                                        <option selected value="7">01/02/2023 - 07/02/2023</option>
+                                        <option value="10">10/02/2023 - 20/02/2023</option>
+                                        <option value="14">22/02/2023 - 28/02/2023</option>
+                                        <option value="16">01/03/2023 - 10/03/2023</option>
+                                        <option value="7">12/03/2023 - 18/03/2023</option>
+                                        <option value="10">20/03/2023 - 05/04/2023</option>
+                                        <option value="14">06/04/2023 - 15/04/2023</option>
+                                        <option value="16">17/04/2023 - 29/04/2023</option>
+                                    </select>  
+                            </form>
+
+                        </td>
+                        
+                        <td><img style="width: 50px;" src="pictures/Jump_SteveHarvey.jpeg" alt="Jump_SteveHarvey"></td>   
+                        <td><a href="#">Delete</a></td>   
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="col-md-12">
+                <a href="index.html" class="badge text-bg-dark">GO back to book category</a>
+            </div>
+
+            <div class="d-flex justify-content-end col-md-12">
+                <!-- <form action="succes.html" target="_blank">
+                    <input type="submit" value="Submit" class="btn btn-outline-secondary">
+                </form> -->
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Submit
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-success" id="exampleModalLabel"  >Book Reserved Successfully</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        You have Successfully Reserved This Book, Here is Your Token : <span class="text-bg-primary">
+                            TAG51426
+                        </span> <span class="text-danger">DON'T SHARE IT NOR LOSE IT</span>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </main>
+ <!-- footer -->
+
+    <footer
+      class="py-3  footer mt-auto  bg-light"
+      style="min-height: 10vh"
+    >
+      <div class="container">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link px-2 text-muted">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="trending.html" class="nav-link px-2 text-muted">Trending</a>
+          </li>
+          <li class="nav-item">
+            <a href="profile.html" class="nav-link px-2 text-muted">My profile</a>
+          </li>
+          <li class="nav-item">
+            <a href="registration.html" class="nav-link px-2 text-muted">Registration</a>
+          </li>
+          <li class="nav-item">
+            <a href="connection.html" class="nav-link px-2 text-muted">Connection</a>
+          </li>
+        </ul>
+        <p class="text-center text-muted">&copy; 2022 CMC SM</p>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
