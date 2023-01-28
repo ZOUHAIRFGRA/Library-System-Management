@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -11,20 +11,22 @@
       crossorigin="anonymous"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600&family=Dancing+Script:wght@400;500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&family=Unbounded:wght@200;300&display=swap" rel="stylesheet">
-<link rel="icon" type="image/x-icon" href="../pictures/favicon.png">
-<style>
-    main img{
-    height: 300px;
-    }
-    #categories{
-        font-family: 'Unbounded', cursive;
-    }
-</style>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600&family=Dancing+Script:wght@400;500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&family=Unbounded:wght@200;300&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="pictures/favicon.png">
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    
+    <style>
+        main img{
+        height: 300px;
+        }
+        #categories{
+            font-family: 'Unbounded', cursive;
+        }
+    </style>
     <title>CMC Library</title>
   </head>
-   <body>
+  <body>
 <header style="min-height: 20vh" >
         <div class="container-fluid p-0">
             <nav class="navbar navbar-expand-lg container-fluid   bg-light">
@@ -134,7 +136,7 @@
                             <p class="card-text text-center">Hunter S.Thompson</p>
                             <a
                             href="#"
-                            class="btn btn-dark d-flex justify-content-center"
+                            class="btn btn-dark d-flex justify-content-center add-to-cart"
                             >add to cart</a
                             >
                         </div>
@@ -153,7 +155,7 @@
                             <p class="card-text text-center">Erik Larson</p>
                             <a
                             href="#"
-                            class="btn btn-dark d-flex justify-content-center"
+                            class="btn btn-dark d-flex justify-content-center add-to-cart"
                             >add to cart</a
                             >
                         </div>
@@ -172,7 +174,7 @@
                             <p class="card-text text-center">John Berendt</p>
                             <a
                             href="#"
-                            class="btn btn-dark d-flex justify-content-center"
+                            class="btn btn-dark d-flex justify-content-center add-to-cart"
                             >add to cart</a
                             >
                         </div>
@@ -191,7 +193,7 @@
                             <p class="card-text text-center">Mark Olshaker</p>
                             <a
                             href="#"
-                            class="btn btn-dark d-flex justify-content-center"
+                            class="btn btn-dark d-flex justify-content-center add-to-cart"
                             >add to cart</a
                             >
                         </div>
@@ -210,7 +212,7 @@
                             <p class="card-text text-center">Erik Larson</p>
                             <a
                             href="#"
-                            class="btn btn-dark d-flex justify-content-center"
+                            class="btn btn-dark d-flex justify-content-center add-to-cart"
                             >add to cart</a
                             >
                         </div>
@@ -229,7 +231,7 @@
                             <p class="card-text text-center">Dave Cullen</p>
                             <a
                             href="#"
-                            class="btn btn-dark d-flex justify-content-center"
+                            class="btn btn-dark d-flex justify-content-center add-to-cart"
                             >add to cart</a
                             >
                         </div>
@@ -268,10 +270,42 @@
       </div>
     </footer>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-      crossorigin="anonymous"
-    ></script>
+           <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+            crossorigin="anonymous"
+            ></script>
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.16.0/dist/umd/popper.min.js" 
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
+            crossorigin="anonymous"></script>
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script>
+    // Get the add to cart buttons
+    const addToCartButtons = document.querySelectorAll('.add-to-cart');
+
+    // Add event listeners to each button
+    addToCartButtons.forEach(function(button) {
+        button.addEventListener('click', function(event) {
+        // Get the parent card element of the clicked button
+        const card = event.target.parentElement.parentElement;
+        
+        // Get the title, author, and image source of the book
+        const title = card.querySelector('.card-title').textContent;
+        const author = card.querySelector('.card-text').textContent;
+        const imageSrc = card.querySelector('img').getAttribute('src');
+        
+        // Store the book data in an object
+        const book = { title, author, imageSrc };
+        
+        // Add the book data to local storage
+        localStorage.setItem('selectedBook', JSON.stringify(book));
+        });
+    });
+    </script>
+
+            
+    
+
+
   </body>
 </html>

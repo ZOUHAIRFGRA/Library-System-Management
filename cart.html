@@ -14,6 +14,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600&family=Dancing+Script:wght@400;500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&family=Unbounded:wght@200;300&display=swap" rel="stylesheet">
 <link rel="icon" type="image/x-icon" href="pictures/favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
 <!-- <style>
     main img{
     height: 300px;
@@ -92,7 +94,7 @@
     <main class="bg-white p-5 " style="min-height:70vh">
         <div class="row col-md-10 mx-auto justify-content-center">
             <div class="col-md-12">
-                <a class="badge text-bg-danger" href="#">Empty Cart</a>
+                <a class="badge text-bg-danger clear-cart-btn" href="#" >Empty Cart</a>
             </div>
 
             <table class="table my-5">
@@ -106,27 +108,23 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Jump: Take the Leap of Faith</td>
+                    <!-- <tr>
+                        <td>....</td>
                         <td>
                             <form action="succes.html">                                    
                                     <select class="form-control custom-select" aria-label="Default select example">
-                                        <option selected value="7">01/02/2023 - 07/02/2023</option>
-                                        <option value="10">10/02/2023 - 20/02/2023</option>
-                                        <option value="14">22/02/2023 - 28/02/2023</option>
-                                        <option value="16">01/03/2023 - 10/03/2023</option>
-                                        <option value="7">12/03/2023 - 18/03/2023</option>
-                                        <option value="10">20/03/2023 - 05/04/2023</option>
-                                        <option value="14">06/04/2023 - 15/04/2023</option>
-                                        <option value="16">17/04/2023 - 29/04/2023</option>
+                                        <option selected value="7">7 days</option>
+                                        <option value="10">10 days</option>
+                                        <option value="14">14 days</option>
+                                        <option value="16">16 days</option>
                                     </select>  
                             </form>
 
                         </td>
                         
-                        <td><img style="width: 50px;" src="pictures/Jump_SteveHarvey.jpeg" alt="Jump_SteveHarvey"></td>   
+                        <td><img style="width: 50px;" src="...." alt="..."></td>   
                         <td><a href="#">Delete</a></td>   
-                    </tr>
+                    </tr> -->
                 </tbody>
             </table>
 
@@ -134,10 +132,19 @@
                 <a href="index.html" class="badge text-bg-dark">GO back to book category</a>
             </div>
 
+            <script>
+            document.querySelector("#submit-btn").addEventListener("click", function(){
+                var cartItems = document.getElementsByClassName("cart-item");
+                if(cartItems.length > 0){
+                // Show the modal
+                $('#exampleModal').modal('show');
+                } else {
+                // Show an error message
+                alert("Cart is empty");
+                }
+            });
+            </script>
             <div class="d-flex justify-content-end col-md-12">
-                <!-- <form action="succes.html" target="_blank">
-                    <input type="submit" value="Submit" class="btn btn-outline-secondary">
-                </form> -->
                 <!-- Button trigger modal -->
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Submit
@@ -152,9 +159,23 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        You have Successfully Reserved This Book, Here is Your Token : <span class="text-bg-primary">
-                            TAG51426
-                        </span> <span class="text-danger">DON'T SHARE IT NOR LOSE IT</span>
+                        <div class="text-center">
+                            <i class="fas fa-check-circle fa-5x text-success"></i>
+                        </div>
+                        <p class="text-center font-weight-bold">You have successfully reserved this book.</p>
+                        <p class="text-center">Here is your token: <span class="fw-bold" style="font-family: 'Montserrat', sans-serif; font-size: 1em;"> <script>
+                        function generateToken() {
+                            var randomString = "";
+                            var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+                            for (var i = 0; i < 8; i++) {
+                                randomString += possible.charAt(Math.floor(Math.random() * possible.length));
+                            }
+                            return randomString;
+                        }
+                        document.write(generateToken());
+                        </script>
+                        </span></p>
+                        <p class="text-center text-danger">Please do not share or lose this token.</p>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -163,8 +184,11 @@
                 </div>
                 </div>
             </div>
+
         </div>
     </main>
+
+    
  <!-- footer -->
 
     <footer
@@ -198,5 +222,61 @@
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
+    <script>
+  // Get the cart table
+  const cartTable = document.querySelector('.table');
+
+  // Get the selected book data from local storage
+  const selectedBook = JSON.parse(localStorage.getItem('selectedBook'));
+
+  // Check if there is a selected book
+  if (selectedBook) {
+    // Create a new table row for the selected book
+    const newRow = document.createElement('tr');
+    newRow.innerHTML = `
+      <td>${selectedBook.title}</td>
+      <td>
+        <form action="succes.html">                                    
+          <select class="form-control custom-select" aria-label="Default select example">
+            <option selected value="7">7 days</option>
+            <option value="10">10 days</option>
+            <option value="14">14 days</option>
+            <option value="16">16 days</option>
+          </select>  
+        </form>
+      </td>
+      <td><img style="width: 50px;" src="${selectedBook.imageSrc}" alt="${selectedBook.title}"></td>   
+      <td><a href="#" id="delete-book-link">Delete</a></td>   
+    `;
+
+    // Append the new row to the cart table
+    cartTable.querySelector('tbody').appendChild(newRow);
+  }
+
+  $(document).ready(function(){
+  $('.clear-cart-btn').click(function(){
+    $('tbody').empty();
+    localStorage.removeItem('cart');
+  });
+});
+
+
+$(document).ready(function(){
+  $("#delete-book-link").click(function(){
+// Add an event listener to the td element
+$('td.delete-link').on('click', function() {
+    // Get the parent tr element of the td element that was clicked
+    var row = $(this).parent();
+    // Remove the row from the table
+    row.remove();
+});
+ });
+
+});
+
+
+
+</script>
+
   </body>
 </html>
