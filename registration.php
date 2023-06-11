@@ -1,11 +1,6 @@
  <?php require('header.php'); ?>
+ <?php require('dbconnection.php'); ?>
  <?php
-  // Database configuration
-  $servername = "localhost";  // Replace with your database servername
-  $username = "username";    // Replace with your database username
-  $password = "password";    // Replace with your database password
-  $dbname = "database";      // Replace with your database name
-
   // Check if the registration form is submitted
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Retrieve form data
@@ -39,7 +34,7 @@
       $stmt->execute();
 
       // Registration successful, redirect to the success page or any other appropriate page
-      header("Location: registration_success.php");
+      header("Location: signin.php");
       exit();
     } catch (PDOException $e) {
       echo "Connection failed: " . $e->getMessage();
@@ -55,7 +50,7 @@
    <div class="row col-md-10 mx-auto justify-content-center  m-2 p-3 border border-2 rounded-2">
 
      <div class="col-md-12">
-       <form method="" action="connection.html" class="row">
+       <form method="post" class="row">
          <div class="mb-3  form-group col-md-6">
            <label for="pseudo" class="form-label">Pseudo</label>
            <input type="text" class="form-control" name='pseudo' id="psd" aria-describedby="psd" placeholder="Enter pseudo">
